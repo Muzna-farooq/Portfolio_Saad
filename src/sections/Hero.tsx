@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Phone, Mail, Globe, ArrowDown } from 'lucide-react';
 
-
 const Hero = () => {
   const [isVisible, setIsVisible] = useState(false);
   
@@ -15,14 +14,14 @@ const Hero = () => {
   return (
     <section 
       id="hero" 
-      className="min-h-screen flex items-center pt-20 pb-16 overflow-hidden relative"
+      className="min-h-screen flex items-center pt-20 pb-16 overflow-x-hidden relative"
     >
-      <div className="absolute inset-0 z-0">
-        <div className="absolute top-0 left-0 w-96 h-96 bg-secondary-900 rounded-full filter blur-[150px] opacity-20"></div>
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-accent-600 rounded-full filter blur-[150px] opacity-20"></div>
+      <div className="absolute inset-0 z-0 pointer-events-none">
+        <div className="absolute top-0 left-0 w-64 h-64 sm:w-96 sm:h-96 bg-secondary-900 rounded-full filter blur-[150px] opacity-20"></div>
+        <div className="absolute bottom-0 right-0 w-64 h-64 sm:w-96 sm:h-96 bg-accent-600 rounded-full filter blur-[150px] opacity-20"></div>
       </div>
       
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 max-w-full">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className={`transition-all duration-1000 transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white leading-tight">
@@ -56,52 +55,50 @@ const Hero = () => {
               </div>
             </div>
 
-  <div className="mt-10 flex flex-wrap gap-4">
-    <a 
-      href="#projects" 
-      className="px-6 py-3 bg-secondary-800 hover:bg-secondary-700 text-white font-medium rounded-lg transition-colors shadow-glow"
-      onClick={(e) => {
-        e.preventDefault();
-        const projectsSection = document.getElementById('projects');
-        if (projectsSection) {
-          window.scrollTo({
-            top: projectsSection.offsetTop - 80,
-            behavior: 'smooth'
-          });
-        }
-      }}
-    >
-      View Projects
-    </a>
-    <a 
-      href="#contact" 
-      className="px-6 py-3 bg-transparent border border-accent-400 hover:bg-accent-900/20 text-white font-medium rounded-lg transition-colors"
-      onClick={(e) => {
-        e.preventDefault();
-        const contactSection = document.getElementById('contact');
-        if (contactSection) {
-          window.scrollTo({
-            top: contactSection.offsetTop - 80,
-            behavior: 'smooth'
-          });
-        }
-      }}
-    >
-      Contact Me
-    </a>
-  </div>
-</div>
+            <div className="mt-10 flex flex-wrap gap-4">
+              <a 
+                href="#projects" 
+                className="px-6 py-3 bg-secondary-800 hover:bg-secondary-700 text-white font-medium rounded-lg transition-colors shadow-glow"
+                onClick={(e) => {
+                  e.preventDefault();
+                  const projectsSection = document.getElementById('projects');
+                  if (projectsSection) {
+                    window.scrollTo({
+                      top: projectsSection.offsetTop - 80,
+                      behavior: 'smooth'
+                    });
+                  }
+                }}
+              >
+                View Projects
+              </a>
+              <a 
+                href="#contact" 
+                className="px-6 py-3 bg-transparent border border-accent-400 hover:bg-accent-900/20 text-white font-medium rounded-lg transition-colors"
+                onClick={(e) => {
+                  e.preventDefault();
+                  const contactSection = document.getElementById('contact');
+                  if (contactSection) {
+                    window.scrollTo({
+                      top: contactSection.offsetTop - 80,
+                      behavior: 'smooth'
+                    });
+                  }
+                }}
+              >
+                Contact Me
+              </a>
+            </div>
+          </div>
 
-          
           <div className={`flex justify-center transition-all duration-1000 delay-300 transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
             <div className="relative">
-              {/* Profile illustration or stylized image placeholder */}
               <div className="w-80 h-80 sm:w-96 sm:h-96 bg-gradient-to-br from-secondary-800 to-accent-900 rounded-full overflow-hidden shadow-glow-lg">
-              <img 
-              src="/your-photo.jpeg" 
-              alt="Saad Khalid" 
-              className="w-full h-full object-cover rounded-full" 
-              />
+                <img 
+                  src="/your-photo.jpeg" 
+                  alt="Saad Khalid" 
+                  className="w-full h-full object-cover rounded-full" 
+                />
               </div>
               <div className="absolute -bottom-4 -right-4 bg-primary-800 px-4 py-3 rounded-lg shadow-lg">
                 <p className="text-sm font-medium text-white">
