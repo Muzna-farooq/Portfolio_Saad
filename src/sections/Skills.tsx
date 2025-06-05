@@ -1,8 +1,8 @@
 import { useEffect, useRef } from 'react';
 import SectionTitle from '../components/SectionTitle';
-import { 
-  Palette, Pencil, Search, Layers, CheckCircle, Check, 
-  BrainCircuit, LineChart, MessagesSquare, Languages, Figma 
+import {
+  Palette, Pencil, Search, Layers, CheckCircle, Check,
+  BrainCircuit, LineChart, MessagesSquare, Languages, Figma
 } from 'lucide-react';
 
 interface Skill {
@@ -65,22 +65,17 @@ const Skills = () => {
   ];
 
   return (
-    <section 
-      id="skills" 
-      className="py-20 relative" 
-      ref={skillsRef}
-    >
+    <section id="skills" className="py-20 relative" ref={skillsRef}>
       <div className="absolute inset-0 z-0">
         <div className="absolute top-1/3 right-0 w-96 h-96 bg-secondary-900 rounded-full filter blur-[150px] opacity-20 transform -translate-y-1/2"></div>
       </div>
-      
+
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <SectionTitle 
-          title="Skills & Expertise" 
+        <SectionTitle
+          title="Skills & Expertise"
           subtitle="A comprehensive overview of my professional abilities and specialized skill sets."
         />
 
-        {/* Outer grid: Design Skills full width, Tools + Soft Skills side by side */}
         <div className="grid grid-cols-1 xl:grid-cols-2 gap-8">
 
           {/* Design Skills */}
@@ -88,7 +83,7 @@ const Skills = () => {
             <h3 className="text-2xl font-display font-semibold text-white mb-6">Design Skills</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               {designSkills.map((skill, index) => (
-                <div 
+                <div
                   key={index}
                   className="flex items-center p-3 bg-primary-700/50 rounded-lg transition-transform hover:-translate-y-1"
                 >
@@ -99,13 +94,13 @@ const Skills = () => {
             </div>
           </div>
 
-          {/* Nested grid for Tools and Soft Skills side by side */}
-          <div className="grid grid-cols-2 gap-8">
+          {/* Tools & Soft Skills */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
 
             {/* Tools */}
             <div className="skill-card opacity-0 bg-primary-800/50 backdrop-blur-sm rounded-xl p-6 border border-primary-700 shadow-lg transform hover:shadow-glow transition-all duration-300">
               <h3 className="text-2xl font-display font-semibold text-white mb-6 flex items-center">
-                <Figma size={24} className="mr-2 text-accent-400" /> 
+                <Figma size={24} className="mr-2 text-accent-400" />
                 Tools
               </h3>
               <div className="space-y-6">
@@ -116,7 +111,7 @@ const Skills = () => {
                       <span className="text-accent-400">{tool.level}%</span>
                     </div>
                     <div className="w-full h-2 bg-primary-700 rounded-full overflow-hidden">
-                      <div 
+                      <div
                         className="h-full bg-gradient-to-r from-secondary-700 to-accent-500 rounded-full"
                         style={{ width: `${tool.level}%` }}
                       ></div>
@@ -134,7 +129,7 @@ const Skills = () => {
               </h3>
               <div className="space-y-4">
                 {softSkills.map((skill, index) => (
-                  <div 
+                  <div
                     key={index}
                     className="flex items-center p-3 bg-primary-700/50 rounded-lg transition-transform hover:-translate-y-1"
                   >
@@ -143,7 +138,7 @@ const Skills = () => {
                   </div>
                 ))}
               </div>
-              
+
               <div className="mt-8">
                 <h3 className="text-xl font-display font-semibold text-white mb-4 flex items-center">
                   <Languages size={24} className="mr-2 text-accent-400" />
@@ -151,7 +146,7 @@ const Skills = () => {
                 </h3>
                 <div className="grid grid-cols-2 gap-4">
                   {languages.map((language, index) => (
-                    <div 
+                    <div
                       key={index}
                       className="flex items-center p-3 bg-primary-700/50 rounded-lg transition-transform hover:-translate-y-1"
                     >

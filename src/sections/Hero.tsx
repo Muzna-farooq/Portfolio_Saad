@@ -105,7 +105,7 @@ const Hero = () => {
               </div>
               <div className="absolute -bottom-4 -right-4 bg-primary-800 px-4 py-3 rounded-lg shadow-lg">
                 <p className="text-sm font-medium text-white">
-                  <span className="text-accent-400">8+</span> Years Experience
+                  <span className="text-accent-400">7</span> Years Experience
                 </p>
               </div>
             </div>
