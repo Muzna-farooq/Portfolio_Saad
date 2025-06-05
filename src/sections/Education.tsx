@@ -17,7 +17,7 @@ const Education = () => {
       icon: <GraduationCap size={28} className="text-accent-400" />
     },
     {
-      degree: "MCSE — Microsoft certified Software Engineering",
+      degree: "MCSE — Microsoft Certified Software Engineering",
       institution: "Vvork Cloud Technologies",
       period: "2018–2019",
       icon: <Award size={28} className="text-accent-400" />
